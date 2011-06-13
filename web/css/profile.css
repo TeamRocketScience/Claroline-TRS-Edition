@@ -1,0 +1,35 @@
+/**
+ $Id: profile.css 13024 2011-03-31 16:30:33Z abourguignon $
+ **/
+
+
+#userProfileBox {
+}
+
+#userProfileBox #userProfileTitle
+{
+    /*color: #669933;
+    font-weight: bold;*/
+}
+
+#userProfileBox #userProfile
+{
+    margin-top: 0.3em;
+    padding: 5px;
+}
+
+#userProfileBox #userPicture {
+    margin: 0;
+    padding-top: 0.3em;
+    text-align: center;
+}
+
+#userProfileBox #userDetails {
+    padding-top: 0.5em;
+    clear:both;
+}
+
+#userProfileBox #userDetails span {
+    font-size: 0.9em;
+    font-weight: bold;
+}

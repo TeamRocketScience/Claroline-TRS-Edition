@@ -1,0 +1,1431 @@
+/**
+ $Id: main.css 13032 2011-04-01 14:12:56Z abourguignon $
+ **/
+
+
+/******************************************************************************
+                        MAIN HTML MARKUP
+******************************************************************************/
+
+* {
+    /* IE bug ! Initial value should be set in % as IE cannot handle em if character size is modified by user */
+   font-size: 100%;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #444;
+    background: #FFF;
+    text-align: left;
+    font-family: Arial, Verdana, Helvetica, Sans-Serif;
+    height: 100%;
+}
+
+a:link, a:visited {
+    color: #369;
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    color: #111C99;
+    text-decoration: none;
+}
+
+a img {
+    border: none;
+    text-decoration: none;
+}
+
+small {
+    font-size: 0.9em;
+}
+
+ul {
+    list-style-type: square;
+}
+
+table td {
+    vertical-align: top;
+}
+
+.spacer {
+    clear: both;
+}
+
+
+/******************************************************************************
+                        FORMS MARKUP
+******************************************************************************/
+
+label {
+    cursor: pointer;
+}
+
+input, textarea, button, select {
+    border: 1px solid #aaa;
+    background: #fff;
+    color: #369;
+}
+
+input[type=submit], input[type=reset], input[type=button], button {
+    margin-left: 2px;
+    color: #666;
+    margin-top: 5px;
+}
+
+input[type=submit], input[type=reset], input[type=button], button {
+    background: #fff;
+    color: #000;
+}
+
+input[type=submit]:hover, button:hover, input[type=button]:hover {
+    background-color: #369;
+    color: #fff;
+}
+
+input[type=radio], input[type=checkbox] {
+    border: 0;
+    margin: 0.1em 0.5em 0.1em 0;
+    padding: 0;
+    vertical-align: middle;
+}
+
+input[type=text].inputSearch {
+    background: url('../../img/search.png') no-repeat top left #fff;
+    padding-left: 18px;
+}
+
+.collapsible a.doCollapse {
+    background: transparent url(img/menu-expanded.gif) no-repeat scroll 0 50%;
+    padding-left: 1.5em;
+}
+
+.collapsed a.doCollapse {
+    background: transparent url(img/menu-collapsed.gif) no-repeat scroll 0 50%;
+}
+
+dl.onOneLine dt, fieldset dl dt {
+    clear: both;
+    float: left;
+    width: 20%;
+    padding: 1px;
+    margin: 2px 0;
+}
+
+dl.onOneLine dd, fieldset dl dd {
+    float: left;
+    padding: 1px;
+    width: 70%;
+    margin: 2px 0;
+}
+
+fieldset {
+    border: 1px solid #eee;
+    margin-bottom: 10px;
+}
+
+fieldset legend { font-weight: bold; }
+
+fieldset dt label {
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.captionBlock {
+    width:45em;
+    padding-left:2px;
+    margin-left:0;
+}
+
+input.radio,
+input.checkbox {
+    cursor: pointer;
+    height: 1em;
+    margin: 0;
+    vertical-align: middle;
+    width: 1em;
+}
+
+.notice {
+    font-size: 0.8em;
+    color: grey;
+}
+
+/* Multiselect table */
+table.multiselect select {
+    width: 250px;
+}
+
+table.multiselect td.arrows {
+    vertical-align: middle;
+}
+
+/* Course form style */
+#courseSettings fieldset {
+    border: 0;
+    margin: 2px;
+    padding: 5px;
+    border-top: 1px solid #eee;
+}
+
+#courseSettings fieldset legend {
+    font-weight: bold;
+    color: #444;
+    margin-left: 20px;
+    padding: 5px;
+    border: 1px solid #eee;
+    background: #fff;
+}
+
+/* Redirector field */
+#redirector select {
+    background: none;
+    border: 1px solid #EEE;
+}
+
+
+/******************************************************************************
+                        CLAROLINE PAGE
+******************************************************************************/
+
+#claroPage {
+    
+}
+
+
+/******************************************************************************
+                        CLAROLINE HEADER
+******************************************************************************/
+
+/*-----------------------------------------------------------------------------
+                        PLATFORM BANNER
+-----------------------------------------------------------------------------*/
+
+#platformBanner {
+    margin: 0;
+    padding: 10px 15px 10px 15px;
+    color: #fff;
+    font-weight: bold;
+    background: url('img/bg_header.gif') repeat-x top left #c5d4e2;
+}
+
+#platformBanner a,
+#platformBanner a:active,
+#platformBanner a:link,
+#platformBanner a:visited {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+#platformBanner a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+
+#platformBanner #siteName a {
+    letter-spacing: 3px;
+    font-size: 1.3em;
+    font-weight: 900;
+    text-shadow: 0px 0px 9px #000; 
+}
+
+#platformBanner #institution {
+    letter-spacing: 3px;
+    font-size: 1.3em;
+}
+
+
+/*-----------------------------------------------------------------------------
+                        CAMPUS BANNER
+-----------------------------------------------------------------------------*/
+
+#campusBannerRight {
+    float: right;
+    text-align: right;
+    margin-top: -1px;
+    padding: 5px;
+    margin: 0;
+}
+
+#campusBannerLeft {
+    float: left;
+    text-align: left;
+    margin-top: -1px;
+    padding: 5px 0px;
+    margin: 0;
+}
+
+
+/*-----------------------------------------------------------------------------
+                        USER BANNER
+-----------------------------------------------------------------------------*/
+
+#userBanner {
+    color: #999;
+    font-weight: bold;
+    font-size: 0.8em;
+    padding: 1px 15px;
+    background: url('img/bg_userbanner.png') repeat-x bottom left #fdf4de;
+    border-top: 1px #999 solid;
+    border-bottom: 1px #999 solid;
+}
+
+#userBanner #userName {
+    color: #693;
+    font-weight: bold;
+    margin: 0;
+}
+
+#userBanner a,
+#userBanner a:link,
+#userBanner a:visited {
+    text-decoration: none;
+    color: #369;
+    font-weight: normal;
+}
+
+#userBanner a:hover,
+#userBanner a:active {
+    color: #369;
+    text-decoration: underline;
+    font-weight: normal;
+}
+
+#userBannerRight {
+    float: right;
+    text-align: right;
+}
+
+#userBannerLeft {
+    float: left;
+    text-align: left;
+}
+
+
+/*-----------------------------------------------------------------------------
+                        COURSE BANNER
+-----------------------------------------------------------------------------*/
+
+#courseBanner {
+    padding: 4px 15px;
+    color: #369;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+#courseBanner #course {
+    float: left;
+    text-align: left;
+}
+
+#courseBanner #course span {
+       display: block;
+}
+
+#courseBanner #courseToolList {
+    float: right;
+    text-align: right;
+}
+
+#courseBanner #courseName {
+    padding: 0;
+    margin: 0;
+    text-indent: 12px;
+    background-image: url(img/arrow_blue.gif);
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+#courseBanner a,
+#courseBanner a:link,
+#courseBanner a:visited {
+    color: #369;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+#courseBanner a:hover,
+#courseBanner a:active {
+    color: #693;
+    text-decoration: underline;
+    font-weight: normal;
+}
+
+#courseBanner #courseCode {
+}
+
+#courseBanner form {
+    padding-top: 5px;
+    margin: 0;
+}
+
+#courseBannerRight {
+    float: right;
+    text-align: right;
+    margin: 0;
+}
+
+#courseBannerLeft {
+    float: left;
+    text-align: left;
+    margin: 0;
+}
+
+#courseBannerRight #redirector select {
+    padding: 0;
+    margin: 0;
+}
+
+#courseBannerRight #redirector option {
+    margin: 2px 1px;
+    padding: 1px 0 1px 0;
+    padding-left: 20px;
+}
+
+
+/*-----------------------------------------------------------------------------
+                        BREAD CRUMB TRAIL
+-----------------------------------------------------------------------------*/
+
+#breadcrumbLine {
+    font-size: 0.8em;
+    color: #666;
+    border: none;
+    padding : 2px 15px;
+}
+
+#breadcrumbLine hr {
+    display: none;
+}
+
+#breadcrumbLine .breadcrumbTrails {
+    float: left;
+}
+
+#breadcrumbLine #toolViewOption {
+    float: right;
+    text-align: right;
+}
+
+#breadcrumbLine a:link,
+#breadcrumbLine a:visited {
+    color: #693;
+    font-weight: normal;
+}
+
+#breadcrumbLine a:hover,
+#breadcrumbLine a:active {
+    color: #999;
+    font-weight: normal;
+}
+
+ul.breadCrumbs {
+    padding:0;
+    margin:0;
+    /* list-style: none; */
+    display:inline;
+}
+
+li.breadCrumbsNode {
+    display:inline;
+    list-style: none
+}
+
+li.firstBreadCrumbsNode {
+    display:inline;
+    list-style: none;
+}
+
+li.lastBreadCrumbsNode {
+    display:inline;
+    list-style: none;
+}
+
+
+/******************************************************************************
+                        CLAROLINE BODY
+******************************************************************************/
+
+#claroBody {
+    padding:15px;
+    font-size: 0.8em;
+    background: url('img/bg_body.jpg') repeat-x top left #fff;
+}
+
+#claroBody a:hover,
+#claroBody a:active {
+    color: #111C99;
+}
+
+#claroBody a.item:hover,
+#claroBody a.item:active {
+    color: #111C99;
+}
+
+#leftSidebar {
+    padding: 2px 5px;
+    margin: 0;
+    float: left;
+    width: 220px;
+    border-right: #ccc solid 1px;
+}
+
+#rightContent {
+    padding: 2px 2px 2px 5px;
+    margin-left: 240px;
+
+}
+
+#rightSidebar {
+    width: 220px;
+    padding-left: 5px;
+    margin: 0;
+    float: right;
+    border-left: #ccc solid 1px;
+}
+
+#leftContent {
+    padding: 0;
+    margin-right: 240px;
+}
+
+
+/******************************************************************************
+                        CLAROLINE FOOTER
+******************************************************************************/
+
+#campusFooter {
+    margin: 0;
+    padding: 15px 15px;
+    font-size: 0.7em;
+    color: #666;
+    background: url('img/bg_footer.jpg') repeat-x top left #fff;
+}
+
+#campusFooter a:link,
+#campusFooter a:visited {
+    color: #666;
+    font-weight: bold;
+}
+
+#campusFooter a:hover,
+#campusFooter a:active {
+    color: #369;
+    font-weight: bold;
+}
+
+#campusFooter hr {
+    display: none;
+}
+
+#campusFooterRight {
+    float: right;
+    text-align: right;
+    padding: 0;
+}
+
+#campusFooterLeft {
+    float: left;
+    padding: 0;
+}
+
+#campusFooterCenter {
+    clear: both;
+    text-align: center;
+}
+
+
+#campusFooterCenter #poweredBy {
+    font-style: italic;
+}
+
+
+/******************************************************************************
+                        COURSE PAGE
+******************************************************************************/
+
+/*-----------------------------------------------------------------------------
+                        COURSE TABLE
+-----------------------------------------------------------------------------*/
+
+table.courseTable {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+table.courseTable td {
+    vertical-align: top;
+}
+
+table.courseTable td.toolList {
+    width: 220px;
+    padding-right: 20px; 
+    border-right: 1px solid #ccc;
+}
+
+table.courseTable td.coursePortletList { 
+    padding-left: 20px; 
+}
+
+
+/*-----------------------------------------------------------------------------
+                        COURSE TOOL LIST
+-----------------------------------------------------------------------------*/
+
+#commonToolList img {
+    vertical-align: text-bottom;
+    padding: 1px 0;
+}
+
+#commonToolList a {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin: 2px 0;
+}
+
+#courseManageToolList {
+    padding-left: 16px;
+}
+
+table.courseTable td.toolList ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+/*-----------------------------------------------------------------------------
+                        GROUP TOOL LIST
+-----------------------------------------------------------------------------*/
+
+ul.groupToolList {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+
+/******************************************************************************
+                        PLATFORM HOMEPAGE
+******************************************************************************/
+
+table.homepageTable td.spacer {
+    width: 30px;
+}
+
+table.homepageTable td.userCommands ul {
+    margin: 0 0 10px 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+table.homepageTable td.userCommands {
+    padding-right: 20px; 
+}
+
+table.homepageTable td.myCourseList { 
+    padding-left: 20px; 
+}
+
+
+/******************************************************************************
+                        ADMIN PANEL
+******************************************************************************/
+
+/*-----------------------------------------------------------------------------
+                        ADMIN TABLE
+-----------------------------------------------------------------------------*/
+
+ul.adminPanel {
+    list-style-type: none;
+}
+
+ul.adminPanel li {
+    float: left;
+    padding: 0;
+    width: 300px;
+}
+
+ul.adminPanel li ul {
+    width: 100%;
+    height: 190px;
+    list-style: square inside;
+    margin-left: 0;
+    padding-left: 1em;
+    text-indent: -1em;
+}
+
+ul.adminPanel li ul li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    
+}
+
+/*-----------------------------------------------------------------------------
+                        ADMIN TABLE FORMS
+-----------------------------------------------------------------------------*/
+
+table.adminPanel input[type=text] {
+    width: 100px;
+}
+
+
+
+/******************************************************************************
+                        COMMAND LINKS
+******************************************************************************/
+
+.claroCmd, .claroCmdDisabled {
+    font-size: 0.9em;
+}
+
+#claroBody .claroCmd,
+#claroBody a.claroCmd:link,
+#claroBody a.claroCmd:visited {
+    color: #369;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#claroBody a.claroCmd:hover,
+#claroBody a.claroCmd:active {
+    color: #111C99;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.claroCmdDisabled {
+    color: #999;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Added for document view mode toolbar */
+
+th .claroCmd {
+    font-size: 0.9em;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+th .claroCmdDisabled {
+    color: #999;
+    font-size: 0.9em;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.claroCmd img,
+.claroCmdDisabled img {
+    vertical-align: text-bottom;
+    padding: 0 1px;
+}
+
+/*
+ * Classes family to emphase some item in the tool interface.
+ * These two classes has to be used together to work correctly.
+ *
+ * SOME EXAMPLES :
+ *
+ *  <a href="0" class="item"><img src="icon.gif" />lorem ipsum</a><br />
+ *  <a href="0" class="item hot"><img src="icon.gif" />lorem ipsum</a><br />
+ *
+ *  <span class="item"><img src="icon.gif" />lorem ipsum</span><br>
+ *  <span class="item hot"><img src="icon.gif" />lorem ipsum<br>
+ *
+ *  <ul style="list-style-image:url(icon.gif);list-style-position:inside">
+ *   <li class="item">lorem ipsum</li>
+ *   <li class="item hot">lorem ipsum</li>
+ *  </ul>
+ */
+
+.item {
+    padding-left: 16px;
+}
+
+.hot {
+    padding-left: 15px;
+    background: url('../../img/hot.png') no-repeat center left;
+}
+
+a.item:visited {
+    color: #369;
+}
+
+/*
+ *Visually the same as the claroTable headerX but can be used outside of a table 
+ * best on a block type tag
+ */
+.header {
+    color: #693;
+    font-weight: bold;
+    padding: 2px 5px 2px 5px;
+    background-color: #EDF1E3;
+    border-bottom: 1px #96BB7A solid;
+    margin: 0;
+    font-size: 100%;
+}
+
+.claroBlock {
+    width: 100%;
+    margin: 5px auto;
+}
+
+.claroBlockHeader {
+    color: #693;
+    font-weight: bold;
+    padding: 2px 5px 2px 5px;
+    margin: 0;
+    background-color: #EDF1E3;
+    border-bottom: 1px #96BB7A solid;
+}
+
+.claroBlockSuperHeader {
+    color: #693;
+    background-color: #DEEECE;
+    border-bottom: 2px #87B665 solid;
+    padding: 2px 5px 2px 5px;
+    font-weight: bold;
+}
+
+.claroBlockHeader img {
+    vertical-align: text-bottom;
+}
+
+.claroBlockContent {
+    border-bottom: 1px solid #eee;
+    padding: 5px;
+}
+
+dl.userCourseList {
+    margin: 5px 0 10px 0;
+    padding-left: 0;
+}
+
+.userCourseList dt {
+    margin: 0;
+    padding: 0;
+}
+
+.userCourseList dd {
+    margin: 0;
+    padding: 0 0 5px 20px;
+}
+
+.userCourseList dt a, .userCourseList dd small {
+    padding: 0;
+}
+
+
+/******************************************************************************
+                        CLAROLINE TABLES
+******************************************************************************/
+
+/* Uniformize claroline table format. The class provide 3 header type
+ *
+ *     - superHeader : allowing to define table title above the column header
+ *     - headerX : define header in the X axis for each column
+ *     - headerY : define header in the Y axis for each rank
+ *
+ * Example of table using a super header and header in X axis
+ *
+ * <table class="claroTable">
+ * <tr class="superHeader">
+ * <th colspan="3">User Birthdate</th>
+ * </tr>
+ * <tr class="headerX">
+ * <th>Firstname</th>
+ * <th>Lastname</th>
+ * <th>Birthdate</th>
+ * </tr>
+ *
+ * <tbody>
+ *
+ * <tr>
+ * <td>Hugues</td>
+ * <td>Peeters</td>
+ * <td>1969-09-27</td>
+ * </tr>
+ * <tr>
+ * ...
+ * </tr>
+ *
+ * </tbody>
+ *
+ * </table>
+ *
+ * Example of table using header in Y axis
+ *
+ *
+ * <table class="claroTable">
+ *
+ * <tr class="superHeader">
+ * <th colspan="3">User Birthdate</th>
+ * </tr>
+ *
+ * <tr>
+ * <th class="headerY">Firstname</th>
+ * <td>Hugues</td>
+ * <td> ...  </td>
+ * </tr>
+ *
+ * <tr>
+ * <th class="headerY">Lastname</th>
+ * <td>Peeters</td>
+ * <td> ...  </td>
+ * </tr>
+ *
+ * <tr>
+ * <th class="headerY">Birthdate</th>
+ * <td>1969-09-27</td>
+ * <td> ...  </td>
+ * </tr>
+ *
+ * </table>
+ */
+
+.claroTable {
+    text-align: left;
+}
+
+.claroTable td,
+.claroTable th {
+    vertical-align: middle;
+    padding: 2px 5px 2px 5px;
+    border-bottom: 1px solid #EDEDED;
+}
+
+.claroTable .superHeader th,
+.claroTable th.superHeader {
+    color: #693;
+    background-color: #EDF1E3;
+    border-bottom: 2px #87B665 solid;
+    padding: 2px 5px 2px 5px;
+    font-weight: bold;
+}
+
+.claroTable img {
+    vertical-align: text-bottom;
+}
+
+.claroTable .headerY th,
+.claroTable .headerX th {
+    color: #693;
+    font-weight: bold;
+    padding: 2px 5px 2px 5px;
+    background-color: #EDF1E3;
+    border-bottom: 1px #96BB7A solid;
+    text-align: center;
+}
+
+.claroTable .headerX th a {
+    font-weight: bold !important ;
+    color: #693;
+    text-decoration : underline;
+}
+
+.claroTable .headerX th a:active,
+.claroTable .headerX th a:hover {
+    color: #693 !important;
+    text-decoration : underline;
+}
+
+/* extension of claroTable class for Image Viewer */
+.claroTable tr th.toolbar {
+    font-weight: normal;
+    padding: 2px 5px 2px 5px;
+}
+
+.claroTable tr.toolbar th.prev {
+    text-align: left;
+    font-weight: normal;
+    padding: 2px 5px 2px 5px;
+}
+
+.claroTable tr.toolbar th.title {
+    font-weight: bold;
+    text-align: center;
+    padding: 2px 5px 2px 5px;
+}
+
+.claroTable tr.toolbar th.next {
+    text-align: center;
+    font-weight: normal;
+    padding: 2px 5px 2px 5px;
+}
+
+.claroTable td.workingWeek {
+    vertical-align: top;
+    color: #999;
+    padding: 2px 5px 2px 5px;
+}
+
+.claroTable td.weekEnd {
+    vertical-align: top;
+    color: #73A244;
+    padding: 2px 5px 2px 5px;
+}
+.claroTable tbody tr td.highlight {
+    vertical-align: top;
+    color: #CD853F;
+    padding: 2px 5px 2px 5px;
+}
+
+.emphaseLine tbody td {
+    border-bottom: solid #DDDEBC 1px ;
+}
+
+.emphaseLine tbody tr:hover {
+    background-color: #EDEDED;
+}
+
+/* Pager */
+.claroPager {
+    text-align: center;
+}
+
+.claroPager img {
+    vertical-align: text-bottom;
+}
+
+.claroPager .pagerBefore {
+    text-align: right;
+}
+
+.claroPager .pagerAfter {
+    text-align: left;
+}
+
+.claroPager .pagerPages {
+    text-align: center;
+    margin: 0 auto;
+    padding: 1px 10px;
+    
+}
+
+
+/******************************************************************************
+                        INTERNAL MESSAGING
+******************************************************************************/
+
+/*TR line for platform message*/
+.platformMessage { 
+    background-color: #fee5c3;
+}
+
+/*TR line for unread message*/
+.unreadMessage {
+    background-color: #e6e5e5;
+    font-weight: bold;
+}
+
+
+.unreadMessage a, 
+.unreadMessage a:link ,
+.unreadMessage a:active ,
+.unreadMessage a:hover ,
+.unreadMessage a:visited {
+    font-weight: bold;
+}
+
+.im_context {
+    /*color: #CCC;*/
+}
+
+.im_list_action, .im_list_selection {
+    text-align: center;
+}
+
+#im_paging {
+    text-align: center;
+}
+
+.imInfoBlock {
+    background: #eee;
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    padding: 5px 10px;
+    margin: 0;
+}
+
+#im_message .header {
+    margin: 0;
+}
+
+.imInfo .imInfoTitle {
+    font-weight: bold;
+    padding-right: 5px;
+}
+
+.imInfo .imInfoValue {
+    
+}
+
+.imContent {
+    padding: 0 15px;
+    margin-top: 3px;
+}
+
+.imCmdList {
+   padding-top: 3px; 
+   margin-left: 0px;
+   float: right;
+}
+
+
+/******************************************************************************
+                        DEBUG BAR
+******************************************************************************/
+
+.debugBar {
+    padding: 3px 5px;
+    color: #F99;
+    background-color:#A33;
+    font-size: 70%;
+}
+
+.debugBar a,
+.debugBar a:link,
+.debugBar a:visited {
+    color: #E6F;
+}
+
+.debugBar .claroDialogBox {
+    color: #990000;
+}
+
+
+/******************************************************************************
+                        MISCELLANEOUS
+******************************************************************************/
+
+.spoiler a {
+    padding-left: 17px;
+    background: url('../../img/spoiler.png') bottom left no-repeat;
+}
+
+.spoilerContent {
+    display: none;
+    background-color: #EFEFEF;
+    padding: 2px;
+    margin: 3px 0;
+}
+/*
+ * 'claroMessageBox' is used to display all messages from the platform like
+ * action confirmation, parameter request, warning mesage...
+ * Things that are usually displayed in a dialog box into offline applications
+ */
+
+.claroMessageBox {
+    background-color : #EDF1E3;
+    border: 1px #693 solid;
+    margin-left: 5px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.claroIntroSection {
+    background-color: #F5F5F5;
+    padding: 5px;
+    margin-top : 5px;
+    margin-bottom: 5px;
+}
+
+/* specific styling for dialog box messages */
+.claroDialogBox {
+    margin-top: 10px; 
+    margin-bottom: 15px; 
+    padding: 5px 85px 5px 20px; 
+    border: 1px solid #CCC;
+    border-left: 5px solid #CCC;
+    background: #F9F7ED;
+}
+
+.boxInfo {
+    border-color: #ccc;
+    background: #F9F7ED url('img/bg_boxinfo.png') bottom right no-repeat;
+}
+
+.boxSuccess {
+    border-color: #090;
+    background: #F9F7ED url('img/bg_boxsuccess.png') bottom right no-repeat;
+}
+
+.boxWarning {
+    border-color: #FFBA00;
+    background: #F9F7ED url('img/bg_boxwarning.png') bottom right no-repeat;
+}
+
+.boxError {
+    border-color: #900;
+    background: #F9F7ED url('img/bg_boxerror.png') bottom right no-repeat;
+}
+
+.boxQuestion {
+    border-color: #369;
+    background: #F9F7ED url('img/bg_boxquestion.png') bottom right no-repeat;
+}
+
+.claroDialogMsg { padding: 2px 5px 1px 20px; }
+.claroDialogBox .msgInfo { } /* I _really_ don't think there is a need for an icon here */
+.claroDialogBox .msgSuccess { background: url('../../img/success.png') top left no-repeat; }
+.claroDialogBox .msgWarning { background: url('../../img/warning.png') top left no-repeat; }
+.claroDialogBox .msgError { background: url('../../img/error.png') top left no-repeat; }
+.claroDialogBox .msgQuestion { background: url('../../img/question.png') top left no-repeat; }
+.claroDialogBox .msgForm { padding: 3px 20px; }
+.claroDialogBox .msgTitle { font-weight: bold; }
+
+.warning b, .warning strong {
+    color: #000;
+}
+
+.warning {
+    color: #333;
+}
+
+/*
+ * 'invisible' is generally attached to element that shouldn't be visible into
+ * common user interface but which are visible in course manager or platform
+ * administrator screen, showing that the element is deactivated or isn't
+ * visible fo the other users
+ */
+
+.invisible {
+    color: #999;
+}
+
+.invisible a,
+.invisible a:link,
+.invisible a:visited,
+a.invisible,
+a:link.invisible,
+a:visited.invisible {
+    color: #999;
+}
+
+/* menu */
+
+.menu a.invisible:visited {
+    color: #999;
+}
+
+
+/*
+    'correct' is attached to element that must be highlighted as correct
+    example : a good score in exercices
+*/
+.correct {
+    color: #090;
+}
+
+/*
+    'error' is attached to element that must be highlighted as correct
+    example : a wrong score in exercices
+    example : an error message
+*/
+.error {
+    color: #900;
+}
+
+/*
+    'highlight' is used when something needs to be especially shown to the user
+    example : 'today' in the agenda
+*/
+.highlight {
+    color: #CD853F;
+    font-weight: bold;
+}
+
+/*
+    'required' is used to set the color of the asterisk displayed before the required form field
+*/
+.required {
+    color: red;
+}
+
+/*
+ * 'rightMenu' is mainly use in the platform home page
+ */
+
+.claroRightMenu {
+    background : #e7f2c1;
+    background-color : #EDF1E3;
+    border: 1px #693 solid;
+    padding: 10px;
+}
+
+.claroRightMenu a:link,
+.claroRightMenu a:visited {
+    color: #369;
+}
+
+.claroRightMenu a:hover,
+.claroRightMenu a:active {
+    color: #693;
+}
+
+.claroRightMenu form {
+    color: #369;
+}
+
+
+.HelpText {
+    color: #999;
+}
+.HelpText ul {
+    color: #999;
+}
+
+.claroToolTitle {
+    margin: 15px 0 5px 0;
+    padding: 0 0 0 15px;
+    font-weight: bold;
+    background-image: url(img/arrow_green.gif);
+    background-position: 0px 5px;
+    background-repeat: no-repeat;
+}
+
+/*
+ * 'comment' is used for comment of documents, forum description, ...
+ */
+
+.comment {
+    font-size : 0.9em;
+    margin-left: 30px;
+}
+
+/*
+ * Navigation with tabs : configuration, modules, ...
+ */
+
+#navlist {
+    margin: 10px;
+    padding: 0 0 7px 10px;
+    border-bottom: 1px solid #DEDEDE;
+}
+
+.tabTitle {
+    padding: 3px 0;
+    margin-left: 0;
+    font-weight: bold;
+    border-bottom: 1px solid #DEDEDE;
+}
+
+.tabTitle a {
+    border-bottom: 4px solid #693;
+}
+
+#navlist li, .tabTitle li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline;
+}
+
+#navlist li a:link,
+#navlist li a:visited {
+    margin: 0 5px 4px 5px;
+    padding: 3px 0.5em;
+    text-decoration: none;
+}
+
+#navlist li a:hover {
+    border-bottom: 4px solid #EDF1E3;
+}
+
+#navlist li a.current {
+    border-bottom: 4px solid #693;
+}
+
+form tr.admin td {
+    background-color : #EDF1E3;
+    border: 1px solid #630;
+    margin: 10px 10px 10px 10px;
+
+}
+
+.linkCloseWindow {
+    padding: 0;
+    margin: 0;
+    text-align:center;
+}
+
+ul.user_list {
+    list-style-type:none;
+}
+
+ul.user_list li {
+    float:left;
+    position:relative;
+    width:100px;
+    padding:0;
+    margin:5px;
+    background:#ccc;
+}
+
+ul.user_list li img.edit_link {
+    position:absolute;
+    right:0; top:0;
+    z-index:100;
+    display:none;
+}
+
+ul.user_list li:hover img.edit_link {
+    display:block;
+}
+
+ul.courses {
+    list-style-type:none; 
+    padding:0;
+}
+
+ul.courses li {
+    margin-bottom:10px;
+}
+
+ul.courses dd {
+    margin:0;
+    font-size:.8em;
+}
+
+h4 {
+    margin-bottom:5px;
+}
+
+/* Use it to highlight admin tools */
+dd.adminControl, 
+div.adminControl, 
+span.adminControl {
+    background:#F9F7E1;
+    padding: 2px 5px 2px 5px;
+    margin-left: -10px;
+    border-left: 5px solid #AA3333;
+}
+
+.centerContent {
+    text-align:center;
+}
+
+.separator {
+    font-weight: normal;
+}
+
+img.userPicture {
+    border: 5px solid #fff;
+    -moz-box-shadow: 0 0 15px #999;
+    -webkit-box-shadow: 0 0 15px #999;
+    box-shadow: 0 0 15px #999;
+}

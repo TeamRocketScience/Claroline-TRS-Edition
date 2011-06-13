@@ -1,0 +1,270 @@
+*****************************************************
+                CLAROLINE 1.10
+*****************************************************
+
+Thank you for downloading Claroline 1.10. This text will guide you
+through the basics of installation and operation of Claroline 1.10. Please
+ensure you read this fully BEFORE proceeding with the installation.
+
+TABLE OF CONTENTS :
+
+1. REQUIREMENTS
+2. INSTALLATION PROCEDURE
+        2.1 New Claroline installation
+        2.2 Upgrading Claroline
+            2.2.1 Understanding Claroline version numbers
+            2.2.2 Upgrade from previous Claroline major version
+            2.2.3 Upgrade from previous Claroline minor version
+3. TROUBLESHOOTING
+4. ADMINISTRATION SECTION
+
+1. REQUIREMENTS
+===============
+
+Claroline should work on the following Operating systems :
+
+        Linux / BSD / Unix (*)
+        Windows (9x, Me, NT4, 2000, XP)
+        MacOs X.
+
+  (*) Claroline have been tested on Red Hat, Debian and Ubuntu GNU/Linux
+      distributions, but other UNIXes and Linux distributions should work too.
+      We've received positive feedbacks from users working on Mandriva and Suse.
+      
+      We also heard of user managing to run Claroline on a Solaris box.
+      
+      Don't hesitate to notify us of any problem encountered on other
+      Linux distributions or UNIX systems.
+
+To install Claroline 1.10 on a computer, whether locally or remotely,
+you need the following on your machine :
+
+1. A web server. We recommend the use Apache, but Claroline is known to work
+with IIS too and should work on any PHP-compatible web server.
+
+2. PHP scripting language (version 5.1 or later), configured with the
+   following modules : mysql, zlib, preg. Most of the PHP5 compiled
+   distributions are provided with these modules. Anyway, their presence
+   is checked by the Claroline install script.
+
+   Some users could meet problems if their PHP setting doesn't fit
+   these ones:
+
+        safe_mode            = Off
+        magic_quotes_runtime = Off
+        short_open_tags      = Off
+
+3. The MySQL databases server (version 4.23 or later) plus a login/password 
+   allowing to administrate and create at least one database.
+
+   Claroline can be installed in tow different modes : 'Single
+   Database' and 'Multi Database'. In 'Multi Database' mode, Claroline
+   will create a new database for each course created. This mode is
+   sometimes more appropriate to manage a platform with a huge bulk of
+   course sites. But it means the database account used by Claroline
+   has to allow to create and administrate several databases. By
+   default Claroline is set to be install on a 'single database host'
+   If you want to use Claroline in 'Multi Database' mode, you have to
+   select this option on purpose at install.
+
+       WARNING ! If you use the 'single database' install option, it is
+       recommended to use this database for Claroline use only. If you
+       share this database with other applications, interferences could
+       occurs between table names of both applications that could conducts
+       to serious problems.
+
+4. Web Write access to web directory where Claroline has been moved
+   or unzipped to. On a Windows machine locally, this
+   is not a problem. Remotely, you need to be allowed to CHMOD 755
+   through FTP, telnet or any means.
+
+5. A Mail Transport Agent (MTA). This not absolutely necessary but some
+   Claroline features will remain silent if you don't provide MTA.
+   Most Linux distributions provide MTA (Sendmail, Qmail, PostFix,
+   ...). On Windows machines, no MTA are provided by default. You can
+   either modify the php.ini file to redirect mail to an MTA available
+   on an other machine, or install an MTA on the Claroline server.
+   Several MTA are freely available for Windows (Mercury, Blat,
+   Netmail95, WMailto , Hamster ...).
+
+2. INSTALLATION PROCEDURE
+=========================
+
+2.1 NEW CLAROLINE INSTALLATION
+------------------------------
+
+1. Download 'claroline19x.tar.gz' (UNIX, Linux) or 'claroline19x.zip' (Windows)
+
+2. Open a shell, go to download directory and type
+
+    tar -zxvf claroline-1_10_x.tar.gz
+
+   Windows : unzip 'claroline-1_10_x.zip' with your favorite application.
+
+3. FTP or move by any means 'index.php' file and 'claroline' directory
+   to your website on web server (whether web root or subdirectory).
+   'index.php' should remain where it is, outside 'claroline' directory.
+   
+   UNIX and Linux : copy the claroline-1_10_x directory to the document root
+   of your web server (typically /var/www/).
+   
+   Windows with wampserver : drag and drop the claroline19x
+   directory to the wampserver ducument root folder, typically
+   c:\Program Files\wamp\www\
+   
+   MacOSX with MAMP : drag and drop the claroline-1_10_x
+   directory to the MAMP document root folder /Applications/MAMP/htdocs/
+
+4. The following folders need to be readable, writeable and executable
+   for everyone:
+   
+    - claroline19x/
+    - claroline19x/module and all its subfolders
+   
+   You can change the access rights from the command line under UNIX or Linux :
+    chmod ugo+w claroline-1_10_x/
+    chmod -R ugo+w claroline-1_10_x/module
+
+4. Open Web Browser and go to
+
+    http://www.mydomain.org/mysite/mydir/claroline/install/
+
+   Windows : with wampserver locally, open:
+
+    http://localhost/claroline/install/ (don't forget the final /).
+
+   MacOSX : with MAMP locally, open:
+
+    http://localhost:8888/claroline/install/ (don't forget the final /).
+
+5. Follow instructions.
+
+   Windows: if you use wampserver out of the box, default connection parameters
+   for MySQL are login : root and no password
+   
+   MacOSX : if you use MAMP, default connection parameters
+   for MySQL are login : root and password : root
+
+2.2 UPGRADING CLAROLINE
+-----------------------
+
+    2.2.1 UNDERSTANDING CLAROLINE VERSION NUMBERS
+
+Claroline version numbers are of the form 1.X.Y where X and Y are two numbers.
+X is called the major version number, while Y is called the minor version number
+
+For example : in version number 1.9.1, 9 is the major version number and 0 is
+the minor version number
+
+In other words, Claroline major versions differ by the major version number (for
+example 1.4.1 and 1.9.1), while minor versions have the same major version
+number but differ by the minor version number (for example 1.9.1 and 1.9.4).
+
+This is important for the Claroline upgrade process. If you want to upgrade
+Claroline between two different major version (let's say 1.8 and 1.9), you
+have to follow the instructions in section 2.2.2. If you want to upgrade
+Claroline between two minor versions of the same major version (let's say
+1.9.1 and 1.9.4), you have to follow the instructions given in section 2.2.3.
+
+    2.2.2 UPDGRADE FROM PREVIOUS CLAROLINE MAJOR VERSION
+
+The upgrade works only from Claroline 1.5.x, 1.6.x, 1.7.x., 1.8.x and 1.9.x.
+
+Older Claroline versions should upgrade first to Claroline 1.5.x before
+upgrade to Claroline 1.10.x
+
+Before upgrading we heavily recommend you do A FULL BACKUP of the previous
+Claroline directories and databases. If you are unsure how to achieve this
+please ask your hosting provider for advice.
+
+1. Download 'claroline110x.tar.gz'
+
+   Windows : download 'claroline-1_10_x.zip'
+
+
+2. Open a shell, go to download directory and type
+
+    tar -zxvf claroline-1_10_x.tar.gz
+
+   Windows : unzip 'claroline-1_10_x.zip'
+
+
+3. Replace your previous claroline directory and index.php by the new ones.
+Copy the web directory to your old Claroline.
+
+If you do not have a module directory in your old Claroline, you can copy the
+one provided in the archive. If you already have a module directory, you can
+copy the new CLCHAT module to this directory.
+
+        WARNING ! Don't delete the previous directories and files before
+        installing the new ones. You will loose your previous
+        configuration files (eg 'claro_main.conf.php'). Simply
+        replace the old directory with a new one with a 'copy'
+        command. That way, the new file versions will overwrite the
+        old ones and leave the others intact.
+        
+        Configuration files are located in /platform/conf/
+
+4. Open Web Browser and go to
+
+   http://www.mydomain.org/mysite/mydir/claroline/admin/upgrade/upgrade.php
+
+   Windows with easyPhp or WampServer locally, open:
+
+   http://localhost/mydir/claroline/admin/upgrade/upgrade.php
+
+5. Follow instructions.
+
+    2.3.3 UPDGRADE FROM A PREVIOUS CLAROLINE MINOR VERSION
+
+Follow the following instructions to upgrade to a new minor version of the same
+major version of Claroline (for example to upgrade from Claroline 1.10.0 to
+1.10.4)
+
+Before upgrading we heavily recommend you do A FULL BACKUP of the previous
+Claroline directories and databases. If you are unsure how to achieve this
+please ask your hosting provider for advice.
+
+1. Download 'claroline-1_10_x.tar.gz'
+
+   Windows : download 'claroline-1_10_x.zip'
+
+
+2. Open a shell, go to download directory and type
+
+    tar -zxvf claroline-1_10_x.tar.gz
+
+   Windows : unzip 'claroline-1_10_x.zip'
+
+
+3. Replace your previous 'claroline' and 'web' folders with the new ones.
+You also have to replace the index.php file at the root of Claroline.
+
+4. Go to your campus home page to check that the platform is still running
+correctly.
+
+5. That's all !
+
+3. TROUBLESHOOTING
+==================
+
+In case web install doesn't work
+
+1. You can find some help and documentation on 'http://www.claroline.net'
+
+2. Check if there is an solution to your issue in the documentation or on the
+forums
+
+3. If you do not find any solution to your issue, ask for help on the forum
+http://forum.claroline.net
+
+4. ADMINISTRATION SECTION
+=========================
+
+To access the Claroline administration section, open browser
+and go to http://www.mydomain.org/mysite/claroline/admin/
+
+==========================================================================
+        Europe, Belgium, Louvain-la-Neuve
+        $Date: 2010-02-25 14:24:32 +0100 (jeu 25 fév 2010) $
+================================== END ===================================

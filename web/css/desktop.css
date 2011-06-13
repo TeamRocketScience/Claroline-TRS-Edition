@@ -1,0 +1,159 @@
+/**
+ $Id: desktop.css 13024 2011-03-31 16:30:33Z abourguignon $
+ **/
+
+/* Portlet */
+.portlet h4 {
+    font-weight: bold;
+    margin: 0 0 5px 0;
+    padding: 0;
+}
+
+.portlet dl, 
+.portlet dt, 
+.portlet dd {
+    margin: 0;
+    padding: 0;
+}
+
+.portlet ul, 
+.portlet dl {
+    margin-bottom: 15px;
+}
+
+.portletContent {
+    margin-top: 0.3em;
+    padding: 5px;
+}
+
+.porletIcon {
+    float:right;
+    margin:auto;
+    padding:0;
+}
+
+.portlet dd {
+    margin-bottom: 0.5em;
+}
+
+.portlet .iconDefinitionList {
+    list-style-position:inside;
+    margin:0;
+    padding:0;
+}
+
+/* Distinct claroTables inside portlets */
+.portlet table.claroTable thead tr td,
+.portlet table.claroTable tbody tr td {
+    color: #444444;
+    background: #f3f7e8;
+}
+.portlet table.claroTable thead tr td.highlight,
+.portlet table.claroTable tbody tr td.highlight {
+    color: #FFF;
+    background: #444444;
+}
+.portlet table.claroTable thead tr th,
+.portlet table.claroTable tbody tr th {
+    color: #444444;
+    background: #f3f7e8;
+    border-bottom: 1px solid #444444;
+}
+
+/* Portlet messages */
+.portlet table.claroTable tbody tr.unreadMessage td {
+    background: #EDF1E3;
+}
+
+.portlet table.claroTable.emphaseLine tbody tr:hover td {
+    background-color: #d5d5d5;
+}
+
+/* Portlet courselist */
+dl.userCourseList dd {
+    margin-left: 20px;
+}
+
+/* Portlet right menu  */
+.portletRightMenu {
+    padding: 2px;
+    margin: 10px 0 0 0;
+    float:right;
+    width:200px;
+}
+
+/* portlet Mycalendar */
+#portletMycalendar .calendar {
+    min-width: 250px;
+    float: left;
+    max-width: 30%;
+    width: 30%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#portletMycalendar .details {
+    min-width: 200px;
+    margin-left: 280px;
+    padding: 0 1em 0.1em 1em;
+    overflow: auto;
+}
+ 
+#portletMycalendar .dayWithEvent {
+    background-color: #EDF1E3;
+}
+
+dl.calendarDetails dd {
+    margin-left: 20px;
+}
+
+
+.avatar img {
+    margin:1em;
+}
+
+.config {
+    padding: 0;
+    margin: 15px 240px 15px 0;
+}
+
+.config td {
+    text-align:center;
+}
+
+.hideul {
+    background: transparent url(../../claroline/desktop/img/hide.png) no-repeat top left; 
+}
+
+.showul {
+    background: transparent url(../../claroline/desktop/img/show.png) no-repeat top left; 
+}
+
+#portletMyCourseList {
+    max-height: 20em;
+    overflow: auto;
+    
+    /* IE hack 
+    _height: expression( Math.min(parseInt(this.offsetHeight), 100) ); */
+}
+
+#portletMyCourseList dd {
+    padding: 0 0 0 20px;
+}
+
+#portletMyCourseList dt {
+    padding-left: 0px;
+}
+
+#portletMyAnnouncements {
+    max-height: 20em;
+    overflow: auto;
+    
+    /* IE hack 
+    _height: expression( Math.min(parseInt(this.offsetHeight), 100) ); */
+}
+
+#portletMyAnnouncements dd {
+    margin: 0 0 0 20px;
+}
